@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="scene"
+            type="com.example.roomexample.database.Scene" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:context=".AddFragment">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add a new scene"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.052" />
+
+        <Spinner
+            android:id="@+id/city_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.144"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <EditText
+            android:id="@+id/name_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Name"
+            android:text="@{scene.name}"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/city_picker"
+            app:layout_constraintTop_toBottomOf="@+id/city_picker" />
+
+        <EditText
+            android:id="@+id/address_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Address"
+            android:text="@{scene.address}"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/name_edit"
+            app:layout_constraintTop_toBottomOf="@+id/name_edit" />
+
+        <EditText
+            android:id="@+id/descript_edit"
+            android:layout_width="341dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Description"
+            android:text="@{scene.description}"
+            android:inputType="textMultiLine|textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/sel_button"
+            app:layout_constraintTop_toBottomOf="@+id/sel_button" />
+
+        <Button
+            android:id="@+id/sel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawableLeft="@android:drawable/ic_menu_camera"
+            android:text="Select a photo"
+            app:layout_constraintStart_toStartOf="@+id/address_edit"
+            app:layout_constraintTop_toBottomOf="@+id/address_edit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

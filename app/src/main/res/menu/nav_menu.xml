@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/listFragment"
+
+        android:icon="@android:drawable/btn_star_big_on"
+        android:title="Favorite" />
+    <item
+        android:id="@+id/discoverFragment"
+        android:icon="?android:attr/actionModeFindDrawable"
+        android:title="Discovery" />
+</menu>
